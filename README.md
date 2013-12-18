@@ -15,18 +15,18 @@ The app should have a 'management' page that shows a summary of the state of all
 =========================================================================================================================================================
 Project Details:
 
-I developed this project between 10 hours and 12 hours
+I developed this project between 10 and 12 hours
 
 Two servlets are available :
-- hangman" the web page to play
-- "manageHangman" the web page to print all the current games for all players
- 
+
 - Servlet "hangman"
  
- If the web app is installed on a local web server, the URL is formed like this:
- http://localhost:8080/hangman?playerName=ebrigand where playerName is a parameter to distinguish the different accounts
- 
+If the web app is installed on a local web server, the URL is formed like this:
+
+http://localhost:8080/hangman?playerName=ebrigand where playerName is a parameter to distinguish the different accounts.
+
 The page is initialized with the current state of the game, or a new game if no game exists for the playerName.
+
 A parameter, 'restart' is used when the game is finished (when the player won or lost the game).
 
 The player can click on different letters on the web page, a click generate an Ajax request, 
@@ -35,7 +35,8 @@ of the model (he class Hangman) is updated and converted into a JSON object and 
  
 - Servlet "manageHangman"
 
- If the web app is installed on a local web server, the URL is formed like this:
+If the web app is installed on a local web server, the URL is formed like this:
+
 The web page is  http://localhost:8080/manageHangman
 
 The page displays in a HTML table all the existing games of players.
