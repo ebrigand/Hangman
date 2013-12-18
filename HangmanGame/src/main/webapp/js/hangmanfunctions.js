@@ -1,6 +1,6 @@
 //Reload the page with a param to indicate that game need to be restarted
 function restart(playerName) {
-	document.location = '/hangman?playerName=' + playerName + ' &restart=true';
+	document.location = '/hangman?playerName=' + playerName + '&restart=true';
 }
 
 //Send a letter and a playerName for a game move if the game is not finished.
@@ -42,7 +42,7 @@ function sendLetterAjax(button, playerName, letter) {
 			}
         },
 		error:function(data,status,er) {
-			alert("error: "+data+" status: "+status+" er:"+er);
+			alert("status: "+status+" er:"+er);
 		}
 	});
 }

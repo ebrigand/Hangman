@@ -58,8 +58,8 @@ public class HangmanServlet extends HttpServlet {
       // Check if the playerName as a request parameter exists
       HangmanService hangmanService = HangmanServiceImpl.getInstance();
       String restart = request.getParameter("restart");
-      if (StringUtils.isNotEmpty(restart) && Boolean.getBoolean(restart)) {
-        hangmanService.restart(playerName);
+      if (StringUtils.isNotEmpty(restart) && Boolean.parseBoolean(restart)) {
+        hangmanService.removeGame(playerName);
       }
       Hangman hangman = null;
       HangmanView hangmanView = null;

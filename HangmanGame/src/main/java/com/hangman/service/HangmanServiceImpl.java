@@ -28,6 +28,8 @@ public class HangmanServiceImpl implements HangmanService {
     return INSTANCE;
   }
 
+  // private final Map<String, Hangman> gameByPlayer = new
+  // ConcurrentHashMap<String, Hangman>();
   private final Map<String, Hangman> gameByPlayer = new HashMap<String, Hangman>();
 
   /*
@@ -61,9 +63,8 @@ public class HangmanServiceImpl implements HangmanService {
    * @see com.hangman.service.HangmanService#restart(java.lang.String)
    */
   @Override
-  public void restart(String playerName) throws GameException {
-    Hangman hangman = getHangman(playerName);
-    gameByPlayer.remove(hangman);
+  public void removeGame(String playerName) throws GameException {
+    gameByPlayer.remove(playerName);
   }
 
   /*

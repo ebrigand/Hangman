@@ -29,14 +29,14 @@ public interface HangmanService {
   Map<String, Hangman> getGameByPlayer();
 
   /**
-   * Restart the game for a player, remove the current game in the map for a
+   * Remove the game for a player, remove the current game in the map for a
    * player
    * 
    * @param playerName
    * @throws GameException
    *           if the player doen't exits
    */
-  void restart(String playerName) throws GameException;
+  void removeGame(String playerName) throws GameException;
 
   /**
    * Return true if a game exists for a player, false othewise
