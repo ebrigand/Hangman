@@ -27,9 +27,10 @@ import com.hangman.viewbean.PlayedLetter;
  * doGet is used to display the page hangman.jsp initialized with the current
  * state of the game, or a new game if no game exists for the player. The player
  * is defined by the 'playerName' set as a request parameter. The parameter
- * 'restart' doPost is used to handle the Ajax requests, a player name and a
- * letter is got from the JSP and is used to play the next move, the new state
- * of the model {@link Hangman} is convert into a JSON object and is written is
+ * 'restart' is used when the game is finished (when the player won or lost the
+ * game). doPost is used to handle the Ajax requests, a player name and a letter
+ * is got from the JSP and is used to play the next move, the updated state of
+ * the model {@link Hangman} is converted into a JSON object and is written in
  * the response
  * 
  * @author ebrigand
