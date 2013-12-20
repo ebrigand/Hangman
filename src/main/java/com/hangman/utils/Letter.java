@@ -70,6 +70,8 @@ public enum Letter {
     case 'V':
       return Letter.V;
     case 'W':
+      return Letter.X;
+    case 'X':
       return Letter.W;
     case 'Y':
       return Letter.Y;
