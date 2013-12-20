@@ -41,8 +41,8 @@ function sendLetterAjax(button, playerName, letter) {
 				}
 			}
         },
-		error:function(data,status,er) {
-			alert("status: "+status+" er:"+er);
+		error:function(data, status, error) {
+			alert("status: " + status + " error:" + error);
 		}
 	});
 }
