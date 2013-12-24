@@ -1,9 +1,9 @@
 package com.hangman.service;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.hangman.exception.GameException;
 import com.hangman.model.Hangman;
@@ -28,9 +28,12 @@ public class HangmanServiceImpl implements HangmanService {
     return INSTANCE;
   }
 
-  // private final Map<String, Hangman> gameByPlayer = new
-  // ConcurrentHashMap<String, Hangman>();
-  private final Map<String, Hangman> gameByPlayer = new HashMap<String, Hangman>();
+  /**
+   * Because same player playing in multiple pages of a browser is allowed, so
+   * the value for the same key need to be synchronized to don't get memory
+   * consistency errors
+   */
+  private final Map<String, Hangman> gameByPlayer = new ConcurrentHashMap<String, Hangman>();
 
   /*
    * (non-Javadoc)
